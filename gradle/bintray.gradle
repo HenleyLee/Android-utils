@@ -1,0 +1,28 @@
+apply plugin: 'com.novoda.bintray-release'
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+    tasks.withType(Javadoc) {
+        options{
+            encoding "UTF-8"
+            charSet 'UTF-8'
+            links "http://docs.oracle.com/javase/7/docs/api"
+        }
+        options.addStringOption('Xdoclint:none', '-quiet')
+    }
+}
+
+
+def siteUrl = 'https://github.com/HenleyLee/Android-utils'
+
+publish {
+    userOrg = 'henleylee'
+    groupId = 'com.henley.android'
+    artifactId = 'android-utils'
+    publishVersion = '1.0.0'
+    uploadName = 'Android-utils'
+    desc = 'Android common tools.'
+    website = siteUrl
+}
