@@ -8,10 +8,10 @@ import java.util.TreeSet;
 /**
  * 随机数工具类(可用于获取固定长度固定字符内的随机数)
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 15:39
  */
-public final class RandomHelper {
+public final class RandomUtils {
 
     /**
      * 数字
@@ -34,7 +34,7 @@ public final class RandomHelper {
      */
     public static final String NUMBERS_AND_LETTERS = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    private RandomHelper() {
+    private RandomUtils() {
         throw new UnsupportedOperationException("Instantiation operation is not supported.");
     }
 
@@ -42,7 +42,7 @@ public final class RandomHelper {
      * 得到一个指定长度length的随机字符串(由数字和大小写字母组成)
      *
      * @param length 随机字符串长度
-     * @return {@link RandomHelper#getRandom(String source, int length)}
+     * @return {@link RandomUtils#getRandom(String source, int length)}
      */
     public static String getRandomNumbersAndLetters(int length) {
         return getRandom(NUMBERS_AND_LETTERS, length);
@@ -52,7 +52,7 @@ public final class RandomHelper {
      * 得到一个指定长度length的随机字符串(由数字组成)
      *
      * @param length 随机字符串长度
-     * @return {@link RandomHelper#getRandom(String source, int length)}
+     * @return {@link RandomUtils#getRandom(String source, int length)}
      */
     public static String getRandomNumbers(int length) {
         return getRandom(NUMBERS, length);
@@ -62,7 +62,7 @@ public final class RandomHelper {
      * 得到一个指定长度length的随机字符串(由大小写字母组成)
      *
      * @param length 随机字符串长度
-     * @return {@link RandomHelper#getRandom(String source, int length)}
+     * @return {@link RandomUtils#getRandom(String source, int length)}
      */
     public static String getRandomLetters(int length) {
         return getRandom(LETTERS, length);
@@ -72,7 +72,7 @@ public final class RandomHelper {
      * 得到一个指定长度length的随机字符串(由大写字母组成)
      *
      * @param length 随机字符串长度
-     * @return {@link RandomHelper#getRandom(String source, int length)}
+     * @return {@link RandomUtils#getRandom(String source, int length)}
      */
     public static String getRandomCapitalLetters(int length) {
         return getRandom(CAPITAL_LETTERS, length);
@@ -82,7 +82,7 @@ public final class RandomHelper {
      * 得到一个指定长度length的随机字符串(由小写字母组成)
      *
      * @param length 随机字符串长度
-     * @return {@link RandomHelper#getRandom(String source, int length)}
+     * @return {@link RandomUtils#getRandom(String source, int length)}
      */
     public static String getRandomLowerCaseLetters(int length) {
         return getRandom(LOWER_CASE_LETTERS, length);
@@ -93,7 +93,7 @@ public final class RandomHelper {
      *
      * @param source 指定字符串
      * @param length 随机字符串长度
-     * @return 如果source为空, 则返回null;反之返回{@link RandomHelper#getRandom(char[] sourceChar, int length)}
+     * @return 如果source为空, 则返回null;反之返回{@link RandomUtils#getRandom(char[] sourceChar, int length)}
      */
     public static String getRandom(String source, int length) {
         return TextUtils.isEmpty(source) ? null : getRandom(source.toCharArray(), length);

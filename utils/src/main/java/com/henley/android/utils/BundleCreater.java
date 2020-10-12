@@ -15,178 +15,178 @@ import androidx.annotation.RequiresApi;
 /**
  * {@link Bundle}构建辅助类
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 14:21
  */
-public final class BundleHelper {
+public final class BundleCreater {
 
     private Bundle bundle;
 
-    public static BundleHelper creat() {
-        return new BundleHelper();
+    public static BundleCreater create() {
+        return new BundleCreater();
     }
 
-    private BundleHelper() {
+    private BundleCreater() {
         bundle = new Bundle();
     }
 
-    public BundleHelper putBoolean(@Nullable String key, boolean value) {
+    public BundleCreater putBoolean(@Nullable String key, boolean value) {
         bundle.putBoolean(key, value);
         return this;
     }
 
-    public BundleHelper putBooleanArray(@Nullable String key, @Nullable boolean[] value) {
+    public BundleCreater putBooleanArray(@Nullable String key, @Nullable boolean[] value) {
         bundle.putBooleanArray(key, value);
         return this;
     }
 
-    public BundleHelper putByte(@Nullable String key, byte value) {
+    public BundleCreater putByte(@Nullable String key, byte value) {
         bundle.putByte(key, value);
         return this;
     }
 
-    public BundleHelper putByteArray(@Nullable String key, @Nullable byte[] value) {
+    public BundleCreater putByteArray(@Nullable String key, @Nullable byte[] value) {
         bundle.putByteArray(key, value);
         return this;
     }
 
-    public BundleHelper putChar(@Nullable String key, char value) {
+    public BundleCreater putChar(@Nullable String key, char value) {
         bundle.putChar(key, value);
         return this;
     }
 
-    public BundleHelper putCharArray(@Nullable String key, @Nullable char[] value) {
+    public BundleCreater putCharArray(@Nullable String key, @Nullable char[] value) {
         bundle.putCharArray(key, value);
         return this;
     }
 
-    public BundleHelper putShort(@Nullable String key, short value) {
+    public BundleCreater putShort(@Nullable String key, short value) {
         bundle.putShort(key, value);
         return this;
     }
 
-    public BundleHelper putShortArray(@Nullable String key, @Nullable short[] value) {
+    public BundleCreater putShortArray(@Nullable String key, @Nullable short[] value) {
         bundle.putShortArray(key, value);
         return this;
     }
 
-    public BundleHelper putInt(@Nullable String key, int value) {
+    public BundleCreater putInt(@Nullable String key, int value) {
         bundle.putInt(key, value);
         return this;
     }
 
-    public BundleHelper putIntArray(@Nullable String key, @Nullable int[] value) {
+    public BundleCreater putIntArray(@Nullable String key, @Nullable int[] value) {
         bundle.putIntArray(key, value);
         return this;
     }
 
-    public BundleHelper putLong(@Nullable String key, long value) {
+    public BundleCreater putLong(@Nullable String key, long value) {
         bundle.putLong(key, value);
         return this;
     }
 
-    public BundleHelper putLongArray(@Nullable String key, @Nullable long[] value) {
+    public BundleCreater putLongArray(@Nullable String key, @Nullable long[] value) {
         bundle.putLongArray(key, value);
         return this;
     }
 
-    public BundleHelper putFloat(@Nullable String key, float value) {
+    public BundleCreater putFloat(@Nullable String key, float value) {
         bundle.putFloat(key, value);
         return this;
     }
 
-    public BundleHelper putFloatArray(@Nullable String key, float[] value) {
+    public BundleCreater putFloatArray(@Nullable String key, float[] value) {
         bundle.putFloatArray(key, value);
         return this;
     }
 
-    public BundleHelper putDouble(@Nullable String key, double value) {
+    public BundleCreater putDouble(@Nullable String key, double value) {
         bundle.putDouble(key, value);
         return this;
     }
 
-    public BundleHelper putDoubleArray(@Nullable String key, @Nullable double[] value) {
+    public BundleCreater putDoubleArray(@Nullable String key, @Nullable double[] value) {
         bundle.putDoubleArray(key, value);
         return this;
     }
 
-    public BundleHelper putString(@Nullable String key, String value) {
+    public BundleCreater putString(@Nullable String key, String value) {
         bundle.putString(key, value);
         return this;
     }
 
-    public BundleHelper putStringArray(@Nullable String key, @Nullable String[] value) {
+    public BundleCreater putStringArray(@Nullable String key, @Nullable String[] value) {
         bundle.putStringArray(key, value);
         return this;
     }
 
-    public BundleHelper putCharSequence(@Nullable String key, CharSequence value) {
+    public BundleCreater putCharSequence(@Nullable String key, CharSequence value) {
         bundle.putCharSequence(key, value);
         return this;
     }
 
-    public BundleHelper putCharSequenceArray(@Nullable String key, @Nullable CharSequence[] value) {
+    public BundleCreater putCharSequenceArray(@Nullable String key, @Nullable CharSequence[] value) {
         bundle.putCharSequenceArray(key, value);
         return this;
     }
 
-    public BundleHelper putSerializable(@Nullable String key, @Nullable Serializable value) {
+    public BundleCreater putSerializable(@Nullable String key, @Nullable Serializable value) {
         bundle.putSerializable(key, value);
         return this;
     }
 
-    public BundleHelper putParcelable(@Nullable String key, @Nullable Parcelable value) {
+    public BundleCreater putParcelable(@Nullable String key, @Nullable Parcelable value) {
         bundle.putParcelable(key, value);
         return this;
     }
 
-    public BundleHelper putParcelableArray(@Nullable String key, @Nullable Parcelable[] value) {
+    public BundleCreater putParcelableArray(@Nullable String key, @Nullable Parcelable[] value) {
         bundle.putParcelableArray(key, value);
         return this;
     }
 
-    public BundleHelper putBundle(@Nullable String key, @Nullable Bundle value) {
+    public BundleCreater putBundle(@Nullable String key, @Nullable Bundle value) {
         bundle.putBundle(key, value);
         return this;
     }
 
-    public BundleHelper putIntegerArrayList(@Nullable String key, @Nullable ArrayList<Integer> value) {
+    public BundleCreater putIntegerArrayList(@Nullable String key, @Nullable ArrayList<Integer> value) {
         bundle.putIntegerArrayList(key, value);
         return this;
     }
 
-    public BundleHelper putStringArrayList(@Nullable String key, @Nullable ArrayList<String> value) {
+    public BundleCreater putStringArrayList(@Nullable String key, @Nullable ArrayList<String> value) {
         bundle.putStringArrayList(key, value);
         return this;
     }
 
-    public BundleHelper putCharSequenceArrayList(@Nullable String key, @Nullable ArrayList<CharSequence> value) {
+    public BundleCreater putCharSequenceArrayList(@Nullable String key, @Nullable ArrayList<CharSequence> value) {
         bundle.putCharSequenceArrayList(key, value);
         return this;
     }
 
-    public BundleHelper putParcelableArrayList(@Nullable String key, @Nullable ArrayList<? extends Parcelable> value) {
+    public BundleCreater putParcelableArrayList(@Nullable String key, @Nullable ArrayList<? extends Parcelable> value) {
         bundle.putParcelableArrayList(key, value);
         return this;
     }
 
-    public BundleHelper putSparseParcelableArray(@Nullable String key, @Nullable SparseArray<? extends Parcelable> value) {
+    public BundleCreater putSparseParcelableArray(@Nullable String key, @Nullable SparseArray<? extends Parcelable> value) {
         bundle.putSparseParcelableArray(key, value);
         return this;
     }
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
-    public BundleHelper putBinder(@Nullable String key, IBinder value) {
+    public BundleCreater putBinder(@Nullable String key, IBinder value) {
         bundle.putBinder(key, value);
         return this;
     }
 
-    public BundleHelper putAll(Bundle bundle) {
+    public BundleCreater putAll(Bundle bundle) {
         this.bundle.putAll(bundle);
         return this;
     }
 
-    public BundleHelper remove(String key) {
+    public BundleCreater remove(String key) {
         this.bundle.remove(key);
         return this;
     }

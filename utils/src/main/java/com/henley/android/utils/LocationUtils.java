@@ -9,10 +9,10 @@ import android.text.TextUtils;
 /**
  * 定位辅助类
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 15:28
  */
-public final class LocationHelper {
+public final class LocationUtils {
 
     /**
      * 判断定位服务是否开启

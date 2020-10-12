@@ -20,10 +20,10 @@ import androidx.annotation.NonNull;
 /**
  * 刘海屏辅助类
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 15:31
  */
-public final class NotchHelper {
+public final class NotchUtils {
 
     private static final String TAG = "NotchHelper";
     /**
@@ -66,13 +66,13 @@ public final class NotchHelper {
      * 处理刘海屏信息
      */
     public static void handleNotchScreen(final Activity activity) {
-        boolean hasNotch = NotchHelper.hasNotchInScreen(activity);
-        int notchHeight = NotchHelper.getNotchHeight(activity);
+        boolean hasNotch = NotchUtils.hasNotchInScreen(activity);
+        int notchHeight = NotchUtils.getNotchHeight(activity);
         if (!hasNotch && notchHeight > 0) {
             hasNotch = true;
         }
         if (hasNotch && notchHeight == 0) {
-            notchHeight = ScreenHelper.getStatusBarHeight(activity);
+            notchHeight = ScreenUtils.getStatusBarHeight(activity);
         }
         NotchScreen notchScreen = new NotchScreen();
         notchScreen.setHasNotch(hasNotch);
@@ -86,7 +86,7 @@ public final class NotchHelper {
 
     private static boolean hasNotchInScreen(Activity activity) {
         boolean hasNotch = false;
-        int systemType = SystemHelper.getSystemType();
+        int systemType = SystemUtils.getSystemType();
         if (systemType == SystemType.SYSTEM_EMUI) {             // 华为
             hasNotch = hasNotchInScreenForHuawei(activity);
         } else if (systemType == SystemType.SYSTEM_MIUI) {      // 小米
@@ -102,7 +102,7 @@ public final class NotchHelper {
     @SuppressLint("SwitchIntDef")
     private static int getNotchHeight(Activity activity) {
         int notchHeight = 0;
-        int systemType = SystemHelper.getSystemType();
+        int systemType = SystemUtils.getSystemType();
         if (systemType == SystemType.SYSTEM_EMUI) {         // 华为
             notchHeight = getNotchSize(activity)[1];
         }
@@ -208,7 +208,7 @@ public final class NotchHelper {
      * 判断是否有刘海屏(小米)
      */
     private static boolean hasNotchInScreenForXiaomi(Context context) {
-        String property = SystemHelper.getSystemProperty(KEY_MIUI_NOTCH);
+        String property = SystemUtils.getSystemProperty(KEY_MIUI_NOTCH);
         return "1".equals(property); // 值为1时则是 Notch 屏手机
     }
 

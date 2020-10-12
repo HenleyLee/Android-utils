@@ -8,7 +8,7 @@ import androidx.annotation.IntDef;
 /**
  * 设备系统类型
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 15:32
  */
 @IntDef({

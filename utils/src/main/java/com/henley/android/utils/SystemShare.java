@@ -19,7 +19,7 @@ import androidx.annotation.StringDef;
 /**
  * 系统分享辅助类
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 15:56
  */
 public final class SystemShare {
@@ -128,7 +128,7 @@ public final class SystemShare {
             case ShareType.FILE:
                 shareIntent.putExtra(Intent.EXTRA_STREAM, shareFileUri);
                 Log.d(TAG, "Share uri: " + shareFileUri.toString());
-                if (SDKHelper.isAtLeastN()) {
+                if (SDKUtils.isAtLeastN()) {
                     List<ResolveInfo> resInfoList = activity.getPackageManager().queryIntentActivities(shareIntent, PackageManager.MATCH_DEFAULT_ONLY);
                     for (ResolveInfo resolveInfo : resInfoList) {
                         String packageName = resolveInfo.activityInfo.packageName;

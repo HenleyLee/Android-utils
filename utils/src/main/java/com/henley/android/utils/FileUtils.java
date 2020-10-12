@@ -22,10 +22,10 @@ import java.util.List;
 /**
  * 文件工具类(可用于读写文件及对文件进行操作)
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 15:59
  */
-public final class FileHelper {
+public final class FileUtils {
 
     private static final int BUFFER_SIZE = 1024 * 4;
     private final static String FILE_EXTENSION_SEPARATOR = ".";
@@ -87,7 +87,7 @@ public final class FileHelper {
      */
     public static final BigInteger ONE_YB = ONE_KB_BI.multiply(ONE_ZB);
 
-    private FileHelper() {
+    private FileUtils() {
         throw new AssertionError();
     }
 

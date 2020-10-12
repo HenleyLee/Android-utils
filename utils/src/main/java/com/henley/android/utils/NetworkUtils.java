@@ -26,10 +26,10 @@ import androidx.annotation.RequiresPermission;
 /**
  * 判断网络状态的工具类
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/25 14:24
  */
-public final class NetworkHelper {
+public final class NetworkUtils {
 
     public static final String DNS1 = "dns1";
     public static final String DNS2 = "dns2";
@@ -37,7 +37,7 @@ public final class NetworkHelper {
     public static final String MAC_WLAN0 = "wlan0";
     private static final String MAC_DEFAULT = "02:00:00:00:00:00";
 
-    private NetworkHelper() {
+    private NetworkUtils() {
         throw new UnsupportedOperationException("Instantiation operation is not supported.");
     }
 

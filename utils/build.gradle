@@ -9,8 +9,8 @@ android {
     defaultConfig {
         minSdkVersion config.minSdkVersion
         targetSdkVersion config.targetSdkVersion
-        versionCode config.versionCode
-        versionName config.versionName
+        versionCode 2
+        versionName '1.0.2'
     }
 
     lintOptions {
@@ -28,8 +28,8 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    compileOnly 'androidx.core:core:1.1.0'
     compileOnly 'androidx.annotation:annotation:1.1.0'
-    compileOnly 'com.github.bumptech.glide:glide:4.11.0'
 }
 
 apply from: '../gradle/bintray.gradle'

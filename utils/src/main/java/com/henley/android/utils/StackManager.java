@@ -13,7 +13,7 @@ import androidx.core.app.ActivityCompat;
  * 管理Activity的堆栈管理器
  * <br>Stack是一种后进先出的数据结构(LIFO),存放了一系列对象的栈。用户可以对栈执行pop和push操作，哪怕是null对象也行，而且Stack没有大小的显示
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 15:55
  */
 public final class StackManager {

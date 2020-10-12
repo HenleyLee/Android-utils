@@ -20,10 +20,10 @@ import androidx.annotation.NonNull;
 /**
  * {@link Intent}操作工具类
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 16:03
  */
-public final class IntentHelper {
+public final class IntentUtils {
 
     /**
      * QQ包名
@@ -50,7 +50,7 @@ public final class IntentHelper {
      */
     public static final String PACKAGENAME_GOOGLEPLAY = "com.android.vending";
 
-    private IntentHelper() {
+    private IntentUtils() {
         throw new UnsupportedOperationException("Instantiation operation is not supported.");
     }
 

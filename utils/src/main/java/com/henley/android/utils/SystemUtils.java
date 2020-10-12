@@ -13,10 +13,10 @@ import java.lang.reflect.Method;
 /**
  * 设备系统辅助类
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 15:31
  */
-public final class SystemHelper {
+public final class SystemUtils {
 
     private static final String MANUFACTURER_XIAOMI = "Xiaomi";
     private static final String MANUFACTURER_HUAWEI = "huawei";

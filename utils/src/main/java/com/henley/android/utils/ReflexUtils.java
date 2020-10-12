@@ -8,10 +8,10 @@ import androidx.annotation.NonNull;
 /**
  * 反射工具类
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/25 17:54
  */
-public final class ReflexUtil {
+public final class ReflexUtils {
 
     public static <T> T getTypeInstance(@NonNull Object object, @NonNull Class<?> clazz) {
         Class<?> targetClass = getTargetClass(object, clazz);

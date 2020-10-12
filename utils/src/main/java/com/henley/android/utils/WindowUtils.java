@@ -8,10 +8,10 @@ import android.view.WindowManager;
 /**
  * 窗口处理辅助类
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 15:58
  */
-public final class WindowHelper {
+public final class WindowUtils {
 
     private static final float DEFAULT_ALPHA_DIM = 0.7f;
     private static final float DEFAULT_ALPHA_LIGHT = 1.0f;

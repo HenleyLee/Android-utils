@@ -6,12 +6,12 @@ import android.content.res.Resources;
 /**
  * 单位转换工具类
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 9:28
  */
-public final class DensityHelper {
+public final class DensityUtils {
 
-    private DensityHelper() {
+    private DensityUtils() {
         throw new UnsupportedOperationException("Instantiation operation is not supported.");
     }
 

@@ -12,12 +12,12 @@ import androidx.annotation.Nullable;
 /**
  * 剪切板操作工具类
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 14:22
  */
-public final class ClipboardHelper {
+public final class ClipboardUtils {
 
-    private ClipboardHelper() {
+    private ClipboardUtils() {
         throw new UnsupportedOperationException("Instantiation operation is not supported.");
     }
 

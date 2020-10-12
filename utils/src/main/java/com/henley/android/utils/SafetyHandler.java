@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 /**
  * 安全的{@link Handler}(解决{@link Handler}导致的内存泄漏)
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/25 18:03
  */
 public final class SafetyHandler extends Handler {

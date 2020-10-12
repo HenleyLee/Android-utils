@@ -15,12 +15,12 @@ import androidx.annotation.RequiresPermission;
 /**
  * 系统设备信息工具类
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/25 14:21
  */
-public final class OSHelper {
+public final class OSUtils {
 
-    private OSHelper() {
+    private OSUtils() {
         throw new UnsupportedOperationException("Instantiation operation is not supported.");
     }
 
@@ -51,7 +51,7 @@ public final class OSHelper {
         } catch (Exception e) {
             return false;
         } finally {
-            CloseHelper.closeIOQuietly(os);
+            CloseUtils.closeIOQuietly(os);
         }
     }
 
@@ -68,7 +68,7 @@ public final class OSHelper {
                 || Build.MANUFACTURER.contains("Genymotion")
                 || (Build.BRAND.startsWith("generic") && Build.DEVICE.startsWith("generic"))
                 || "google_sdk".equals(Build.PRODUCT)
-                || NetworkHelper.getSimOperatorName(context).toLowerCase().equals("android");
+                || NetworkUtils.getSimOperatorName(context).toLowerCase().equals("android");
     }
 
     /**

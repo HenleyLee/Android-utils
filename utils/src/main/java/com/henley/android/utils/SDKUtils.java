@@ -5,12 +5,12 @@ import android.os.Build;
 /**
  * SDK版本工具类
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 15:45
  */
-public final class SDKHelper {
+public final class SDKUtils {
 
-    private SDKHelper() {
+    private SDKUtils() {
         throw new UnsupportedOperationException("Instantiation operation is not supported.");
     }
 

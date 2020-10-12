@@ -27,10 +27,10 @@ import androidx.annotation.XmlRes;
 import androidx.core.content.ContextCompat;
 
 /**资源操作工具类
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 15:42
  */
-public final class ResourceHelper {
+public final class ResourceUtils {
 
     /**
      * 获取Resources对象
@@ -75,7 +75,7 @@ public final class ResourceHelper {
         } catch (IOException e) {
             return null;
         } finally {
-            CloseHelper.closeIOQuietly(br, in, is);
+            CloseUtils.closeIOQuietly(br, in, is);
         }
     }
 
@@ -101,7 +101,7 @@ public final class ResourceHelper {
         } catch (IOException e) {
             return null;
         } finally {
-            CloseHelper.closeIOQuietly(br, in, is);
+            CloseUtils.closeIOQuietly(br, in, is);
         }
     }
 
@@ -131,7 +131,7 @@ public final class ResourceHelper {
         } catch (IOException e) {
             return null;
         } finally {
-            CloseHelper.closeIOQuietly(br, in, is);
+            CloseUtils.closeIOQuietly(br, in, is);
         }
     }
 
@@ -154,7 +154,7 @@ public final class ResourceHelper {
         } catch (IOException e) {
             return null;
         } finally {
-            CloseHelper.closeIOQuietly(br, in, is);
+            CloseUtils.closeIOQuietly(br, in, is);
         }
     }
 
@@ -183,7 +183,7 @@ public final class ResourceHelper {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            CloseHelper.closeIOQuietly(br, isr);
+            CloseUtils.closeIOQuietly(br, isr);
         }
         return null;
     }

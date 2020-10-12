@@ -17,12 +17,12 @@ import androidx.core.content.FileProvider;
 /**
  * Android 7.0辅助类(适配FileProvider)
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 16:00
  */
-public final class Android7Helper {
+public final class Android7Utils {
 
-    private Android7Helper() {
+    private Android7Utils() {
         throw new UnsupportedOperationException("Instantiation operation is not supported.");
     }
 
@@ -35,7 +35,7 @@ public final class Android7Helper {
      */
     public static Uri getUriForFile(Context context, File file) {
         Uri fileUri;
-        if (SDKHelper.isAtLeastN()) {
+        if (SDKUtils.isAtLeastN()) {
             fileUri = getUriForFileProvider(context, file);
         } else {
             fileUri = Uri.fromFile(file);
@@ -90,7 +90,7 @@ public final class Android7Helper {
      * @see #setIntentDataAndType(Intent, Uri, String, boolean)
      */
     public static void setIntentDataAndType(Intent intent, Uri uri, String type, boolean writeAble) {
-        if (SDKHelper.isAtLeastN()) {
+        if (SDKUtils.isAtLeastN()) {
             if (TextUtils.isEmpty(type)) {
                 intent.setData(uri);
             } else {
@@ -135,7 +135,7 @@ public final class Android7Helper {
     public static Intent getIntentWithInstallApk(Context context, File file) {
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
-        if (SDKHelper.isAtLeastN()) {
+        if (SDKUtils.isAtLeastN()) {
             intent.setDataAndType(getUriForFileProvider(context, file), "application/vnd.android.package-archive");
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         } else {
@@ -153,7 +153,7 @@ public final class Android7Helper {
     public static Intent getIntentWithCapture(Context context, File file) {
         Intent intent = new Intent();
         intent.setAction(MediaStore.ACTION_IMAGE_CAPTURE);//设置Action为拍照
-        if (SDKHelper.isAtLeastN()) {
+        if (SDKUtils.isAtLeastN()) {
             intent.putExtra(MediaStore.EXTRA_OUTPUT, getUriForFileProvider(context, file));
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
@@ -192,12 +192,12 @@ public final class Android7Helper {
      */
     public static Intent getIntentWithCrop(Context context, Uri inputUri, File outputFile) {
         Intent intent = new Intent("com.android.camera.action.CROP");
-        if (SDKHelper.isAtLeastN()) {
+        if (SDKUtils.isAtLeastN()) {
             intent.setDataAndType(inputUri, "image/*");
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-        } else if (SDKHelper.isAtLeastK()) {
-            String path = ImagePathHelper.getPath(context, inputUri);
+        } else if (SDKUtils.isAtLeastK()) {
+            String path = ImagePathUtils.getPath(context, inputUri);
             intent.setDataAndType(Uri.fromFile(new File(path)), "image/*");
         } else {
             intent.setDataAndType(inputUri, "image/*");

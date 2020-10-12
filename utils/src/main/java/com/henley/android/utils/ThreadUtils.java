@@ -5,12 +5,12 @@ import android.os.Looper;
 /**
  * 线程辅助类
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 15:56
  */
-public final class ThreadHelper {
+public final class ThreadUtils {
 
-    private ThreadHelper() {
+    private ThreadUtils() {
         throw new UnsupportedOperationException("Instantiation operation is not supported.");
     }
 

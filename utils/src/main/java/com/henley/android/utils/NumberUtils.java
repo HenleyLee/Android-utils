@@ -13,12 +13,12 @@ import java.util.regex.Pattern;
 /**
  * 数值辅助类
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/25 13:59
  */
-public final class NumberHelper {
+public final class NumberUtils {
 
-    private NumberHelper() {
+    private NumberUtils() {
         throw new UnsupportedOperationException("Instantiation operation is not supported.");
     }
 

@@ -10,10 +10,10 @@ import java.net.URLEncoder;
 /**
  * Url处理辅助类
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 15:57
  */
-public final class UrlHelper {
+public final class UrlUtils {
 
     /**
      * HTTP协议

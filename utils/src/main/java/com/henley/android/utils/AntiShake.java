@@ -5,7 +5,7 @@ import java.util.LinkedList;
 /**
  * 防抖动点击辅助类
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 14:19
  */
 public final class AntiShake {

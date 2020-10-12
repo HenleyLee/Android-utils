@@ -11,12 +11,12 @@ import java.security.NoSuchAlgorithmException;
 /**
  * 摘要算法(支持MD2/MD5/SHA/SHA256/SHA384/SHA512)
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 14:23
  */
-public final class DigestHelper {
+public final class DigestUtils {
 
-    private DigestHelper() {
+    private DigestUtils() {
         throw new UnsupportedOperationException("Instantiation operation is not supported.");
     }
 
@@ -48,7 +48,7 @@ public final class DigestHelper {
         FileChannel ch = in.getChannel();
         MappedByteBuffer byteBuffer = ch.map(FileChannel.MapMode.READ_ONLY, 0, file.length());
         digest.update(byteBuffer);
-        CloseHelper.closeIOQuietly(ch, in);
+        CloseUtils.closeIOQuietly(ch, in);
         return byte2Hex(digest.digest());
     }
 

@@ -6,12 +6,12 @@ import java.io.IOException;
 /**
  * 关闭工具类
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/25 14:23
  */
-public final class CloseHelper {
+public final class CloseUtils {
 
-    private CloseHelper() {
+    private CloseUtils() {
         throw new UnsupportedOperationException("Instantiation operation is not supported.");
     }
 

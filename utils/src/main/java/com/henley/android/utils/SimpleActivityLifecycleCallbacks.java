@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 /**
  * {@link Activity}生命周期回调的空实现
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 16:52
  */
 public class SimpleActivityLifecycleCallbacks implements Application.ActivityLifecycleCallbacks {

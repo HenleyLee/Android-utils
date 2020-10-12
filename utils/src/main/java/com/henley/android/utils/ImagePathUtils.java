@@ -13,10 +13,10 @@ import android.provider.MediaStore;
 /**
  * 图片路径处理辅助类
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 16:01
  */
-public final class ImagePathHelper {
+public final class ImagePathUtils {
 
     /**
      * 根据Uri获取文件绝对路径
@@ -29,7 +29,7 @@ public final class ImagePathHelper {
     @TargetApi(Build.VERSION_CODES.KITKAT)
     public static String getPath(final Context context, final Uri uri) {
         // DocumentUri
-        if (SDKHelper.isAtLeastK() && DocumentsContract.isDocumentUri(context, uri)) {
+        if (SDKUtils.isAtLeastK() && DocumentsContract.isDocumentUri(context, uri)) {
             // ExternalStorageDocumentsUri
             if (isExternalStorageDocumentsUri(uri)) {
                 final String docId = DocumentsContract.getDocumentId(uri);

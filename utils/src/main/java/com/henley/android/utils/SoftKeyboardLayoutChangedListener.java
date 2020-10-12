@@ -21,10 +21,10 @@ import java.util.List;
  * <li>点击软键盘自带的收起按钮(软键盘收起)
  * </ol>
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 15:54
  */
-public final class SoftKeyboardStateChangedHelper implements ViewTreeObserver.OnGlobalLayoutListener {
+public final class SoftKeyboardLayoutChangedListener implements ViewTreeObserver.OnGlobalLayoutListener {
 
     private static final int DEFAULT_KEYBOARD_HEIGHT = 200;
     private View activityRootView;
@@ -33,15 +33,15 @@ public final class SoftKeyboardStateChangedHelper implements ViewTreeObserver.On
     private int defaultKeyboardHeight;
     private List<SoftKeyboardStateChangedListener> listeners = new LinkedList<>();
 
-    public SoftKeyboardStateChangedHelper(Activity activity) {
+    public SoftKeyboardLayoutChangedListener(Activity activity) {
         this(activity.getWindow().getDecorView().findViewById(android.R.id.content), false);
     }
 
-    public SoftKeyboardStateChangedHelper(View activityRootView) {
+    public SoftKeyboardLayoutChangedListener(View activityRootView) {
         this(activityRootView, false);
     }
 
-    public SoftKeyboardStateChangedHelper(View activityRootView, boolean isSoftKeyboardOpened) {
+    public SoftKeyboardLayoutChangedListener(View activityRootView, boolean isSoftKeyboardOpened) {
         this.activityRootView = activityRootView;
         this.isSoftKeyboardOpened = isSoftKeyboardOpened;
         this.activityRootView.getViewTreeObserver().addOnGlobalLayoutListener(this);

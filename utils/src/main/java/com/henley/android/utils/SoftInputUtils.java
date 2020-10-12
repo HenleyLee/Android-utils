@@ -23,12 +23,12 @@ import androidx.annotation.Nullable;
 /**
  * 软键盘操作工具类
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 15:53
  */
-public final class SoftInputHelper {
+public final class SoftInputUtils {
 
-    private SoftInputHelper() {
+    private SoftInputUtils() {
         throw new UnsupportedOperationException("Instantiation operation is not supported.");
     }
 

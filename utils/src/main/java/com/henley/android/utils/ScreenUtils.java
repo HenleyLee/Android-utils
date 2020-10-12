@@ -26,14 +26,14 @@ import java.lang.reflect.Method;
 /**
  * 屏幕相关工具类
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 15:33
  */
-public final class ScreenHelper {
+public final class ScreenUtils {
 
     private static final float LONG_SCREEN_RATIO = 2.0f;
 
-    private ScreenHelper() {
+    private ScreenUtils() {
         throw new UnsupportedOperationException("Instantiation operation is not supported.");
     }
 

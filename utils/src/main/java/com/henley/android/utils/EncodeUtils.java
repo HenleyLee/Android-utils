@@ -12,12 +12,12 @@ import java.net.URLEncoder;
 /**
  * 编码/解码工具类
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 14:28
  */
-public final class EncodeHelper {
+public final class EncodeUtils {
 
-    private EncodeHelper() {
+    private EncodeUtils() {
         throw new UnsupportedOperationException("Instantiation operation is not supported.");
     }
 

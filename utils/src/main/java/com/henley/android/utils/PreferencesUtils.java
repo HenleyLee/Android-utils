@@ -10,18 +10,18 @@ import java.util.Set;
 /**
  * 共享参数工具类
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/25 13:54
  */
-public final class PreferencesHelper {
+public final class PreferencesUtils {
 
     private static final String DEFAULT_NAME = "config_prefs";
 
     public static Context context = Tool.getContext();
-    private volatile static PreferencesHelper INSTANCE;
+    private volatile static PreferencesUtils INSTANCE;
     private final SharedPreferences preferences;
 
-    private PreferencesHelper(String name, int mode) {
+    private PreferencesUtils(String name, int mode) {
         if (TextUtils.isEmpty(name)) {
             name = DEFAULT_NAME;
         }
@@ -33,7 +33,7 @@ public final class PreferencesHelper {
      *
      * @see #getInstance(String)
      */
-    public static PreferencesHelper getInstance() {
+    public static PreferencesUtils getInstance() {
         return getInstance(DEFAULT_NAME);
     }
 
@@ -43,7 +43,7 @@ public final class PreferencesHelper {
      * @param name 文件名(不用带后缀)
      * @see #getInstance(String, int)
      */
-    public static PreferencesHelper getInstance(String name) {
+    public static PreferencesUtils getInstance(String name) {
         return getInstance(name, Context.MODE_PRIVATE);
     }
 
@@ -58,11 +58,11 @@ public final class PreferencesHelper {
      *             <br/>{@link Context#MODE_WORLD_READABLE} 表示当前文件可以被其他应用读取
      *             <br/>{@link Context#MODE_WORLD_WRITEABLE} 表示当前文件可以被其他应用写入
      */
-    public static PreferencesHelper getInstance(String name, int mode) {
+    public static PreferencesUtils getInstance(String name, int mode) {
         if (INSTANCE == null) {
-            synchronized (PreferencesHelper.class) {
+            synchronized (PreferencesUtils.class) {
                 if (INSTANCE == null) {
-                    INSTANCE = new PreferencesHelper(name, mode);
+                    INSTANCE = new PreferencesUtils(name, mode);
                 }
             }
         }

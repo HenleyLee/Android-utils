@@ -16,10 +16,10 @@ import androidx.core.app.NotificationManagerCompat;
 /**
  * 通知管理工具类
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/26 15:38
  */
-public final class NotificationHelper {
+public final class NotificationUtils {
 
     private static final String GET_SERVICE = "getService";
     private static final String INOTIFICATIONMANAGER_CLASS = "android.app.INotificationManager";

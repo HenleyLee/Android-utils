@@ -27,14 +27,14 @@ import androidx.annotation.RequiresPermission;
 /**
  * App信息工具类
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/25 11:43
  */
-public final class AppHelper {
+public final class AppUtils {
 
     private static final String TAG = "AppUtils";
 
-    private AppHelper() {
+    private AppUtils() {
         throw new UnsupportedOperationException("Instantiation operation is not supported.");
     }
 

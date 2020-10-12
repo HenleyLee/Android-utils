@@ -14,12 +14,12 @@ import androidx.annotation.StringRes;
 /**
  * 字符串工具类
  *
- * @author liyunlong
+ * @author Henley
  * @since 2020/5/25 14:30
  */
-public final class StringHelper {
+public final class StringUtils {
 
-    private StringHelper() {
+    private StringUtils() {
         throw new UnsupportedOperationException("Instantiation operation is not supported.");
     }
 
