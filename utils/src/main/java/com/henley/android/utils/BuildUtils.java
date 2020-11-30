@@ -3,15 +3,36 @@ package com.henley.android.utils;
 import android.os.Build;
 
 /**
- * SDK版本工具类
+ * Android构建版本工具类
  *
  * @author Henley
  * @since 2020/5/26 15:45
  */
-public final class SDKUtils {
+public final class BuildUtils {
 
-    private SDKUtils() {
+    private BuildUtils() {
         throw new UnsupportedOperationException("Instantiation operation is not supported.");
+    }
+
+    /**
+     * 返回当前设备的SDK版本
+     */
+    public static int getSDKVersion() {
+        return Build.VERSION.SDK_INT;
+    }
+
+    /**
+     * 判断SDK版本是否大于Android 4.0(API level 14,Ice Cream Sandwich)
+     */
+    public static boolean isAtLeastI() {
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH;
+    }
+
+    /**
+     * 判断SDK版本是否大于Android 4.1(API level 16,Jelly Bean)
+     */
+    public static boolean isAtLeastJ() {
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN;
     }
 
     /**
@@ -61,6 +82,13 @@ public final class SDKUtils {
      */
     public static boolean isAtLeastQ() {
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q;
+    }
+
+    /**
+     * 判断SDK版本是否大于Android 11(API level 30)
+     */
+    public static boolean isAtLeastR() {
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.R;
     }
 
 }

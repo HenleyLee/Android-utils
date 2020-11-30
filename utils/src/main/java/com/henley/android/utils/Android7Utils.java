@@ -35,7 +35,7 @@ public final class Android7Utils {
      */
     public static Uri getUriForFile(Context context, File file) {
         Uri fileUri;
-        if (SDKUtils.isAtLeastN()) {
+        if (BuildUtils.isAtLeastN()) {
             fileUri = getUriForFileProvider(context, file);
         } else {
             fileUri = Uri.fromFile(file);
@@ -90,7 +90,7 @@ public final class Android7Utils {
      * @see #setIntentDataAndType(Intent, Uri, String, boolean)
      */
     public static void setIntentDataAndType(Intent intent, Uri uri, String type, boolean writeAble) {
-        if (SDKUtils.isAtLeastN()) {
+        if (BuildUtils.isAtLeastN()) {
             if (TextUtils.isEmpty(type)) {
                 intent.setData(uri);
             } else {
@@ -135,7 +135,7 @@ public final class Android7Utils {
     public static Intent getIntentWithInstallApk(Context context, File file) {
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
-        if (SDKUtils.isAtLeastN()) {
+        if (BuildUtils.isAtLeastN()) {
             intent.setDataAndType(getUriForFileProvider(context, file), "application/vnd.android.package-archive");
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         } else {
@@ -153,7 +153,7 @@ public final class Android7Utils {
     public static Intent getIntentWithCapture(Context context, File file) {
         Intent intent = new Intent();
         intent.setAction(MediaStore.ACTION_IMAGE_CAPTURE);//设置Action为拍照
-        if (SDKUtils.isAtLeastN()) {
+        if (BuildUtils.isAtLeastN()) {
             intent.putExtra(MediaStore.EXTRA_OUTPUT, getUriForFileProvider(context, file));
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
@@ -192,11 +192,11 @@ public final class Android7Utils {
      */
     public static Intent getIntentWithCrop(Context context, Uri inputUri, File outputFile) {
         Intent intent = new Intent("com.android.camera.action.CROP");
-        if (SDKUtils.isAtLeastN()) {
+        if (BuildUtils.isAtLeastN()) {
             intent.setDataAndType(inputUri, "image/*");
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-        } else if (SDKUtils.isAtLeastK()) {
+        } else if (BuildUtils.isAtLeastK()) {
             String path = ImagePathUtils.getPath(context, inputUri);
             intent.setDataAndType(Uri.fromFile(new File(path)), "image/*");
         } else {

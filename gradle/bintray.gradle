@@ -21,8 +21,10 @@ publish {
     userOrg = 'henleylee'
     groupId = 'com.henley.android'
     artifactId = 'android-utils'
-    publishVersion = '1.0.2'
+    publishVersion = '1.0.3'
     uploadName = 'Android-utils'
     desc = 'Android common tools.'
     website = siteUrl
+    dryRun = false
+    override = true
 }

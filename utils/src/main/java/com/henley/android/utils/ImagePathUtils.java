@@ -29,7 +29,7 @@ public final class ImagePathUtils {
     @TargetApi(Build.VERSION_CODES.KITKAT)
     public static String getPath(final Context context, final Uri uri) {
         // DocumentUri
-        if (SDKUtils.isAtLeastK() && DocumentsContract.isDocumentUri(context, uri)) {
+        if (BuildUtils.isAtLeastK() && DocumentsContract.isDocumentUri(context, uri)) {
             // ExternalStorageDocumentsUri
             if (isExternalStorageDocumentsUri(uri)) {
                 final String docId = DocumentsContract.getDocumentId(uri);

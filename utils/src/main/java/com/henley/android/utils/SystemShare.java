@@ -128,7 +128,7 @@ public final class SystemShare {
             case ShareType.FILE:
                 shareIntent.putExtra(Intent.EXTRA_STREAM, shareFileUri);
                 Log.d(TAG, "Share uri: " + shareFileUri.toString());
-                if (SDKUtils.isAtLeastN()) {
+                if (BuildUtils.isAtLeastN()) {
                     List<ResolveInfo> resInfoList = activity.getPackageManager().queryIntentActivities(shareIntent, PackageManager.MATCH_DEFAULT_ONLY);
                     for (ResolveInfo resolveInfo : resInfoList) {
                         String packageName = resolveInfo.activityInfo.packageName;
