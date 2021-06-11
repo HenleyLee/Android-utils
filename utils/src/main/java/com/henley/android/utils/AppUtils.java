@@ -312,7 +312,7 @@ public final class AppUtils {
     /**
      * 判断应用程序是否安装
      */
-    public static boolean isInsatalled(Context context, String packageName) {
+    public static boolean isInstalled(Context context, String packageName) {
         if (TextUtils.isEmpty(packageName))
             return false;
         try {
